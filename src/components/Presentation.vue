@@ -1,13 +1,17 @@
 <template>
   <v-app
     style="
-      background-image: url('./src/assets/background.png');
+      background-image: url('/src/assets/background.png');
       background-size: cover;
       background-position: center;
     "
   >
-    <div class="h-full flex flex-col items-start justify-center p-4 pb-40 gap-4">
-      <h1 class="font-mohave font-bold text-6xl w-80 text-amber-500 sm:w-2/3 sm:text-8xl" >
+    <div
+      class="h-full flex flex-col items-start justify-center p-4 pb-40 gap-4"
+    >
+      <h1
+        class="font-mohave font-bold text-6xl w-80 text-amber-500 sm:w-2/3 sm:text-8xl"
+      >
         MANTENHA-SE
         <br />
         NO ESTILO

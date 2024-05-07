@@ -1,11 +1,5 @@
 <template>
-  <v-app
-    style="
-      background-image: url('/src/assets/background.png');
-      background-size: cover;
-      background-position: center;
-    "
-  >
+  <v-app class="main">
     <div
       class="h-full flex flex-col items-start justify-center p-4 pb-40 gap-4"
     >
@@ -34,5 +28,11 @@ export default {};
   font-size: 32pt;
   max-width: 30rem;
   line-height: 3rem;
+}
+.main {
+  background-image: url(@assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>

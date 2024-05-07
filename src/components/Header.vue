@@ -1,31 +1,27 @@
 <template>
   <div>
-    <v-app-bar :elevation="0" scroll-behavior="hide" scroll-threshold="1">
-      <v-app-bar-title class="text-h5 text-yellow-darken-3 font-weight-black">
-        WiskerWise
-      </v-app-bar-title>
+    <header class="bg-zinc-800 px-5 flex items-center justify-between">
+      <a><h1 class="font-bold text-2xl text-amber-500">WiskerWise</h1></a>
 
-      <v-app-bar-nav-icon @click="openMenu" class="d-flex d-sm-none">
+      <v-app-bar-nav-icon @click="openMenu" class="block sm:hidden">
         <v-icon v-if="isActive">mdi-arrow-left</v-icon>
         <v-icon v-else="isActive">mdi-menu</v-icon>
       </v-app-bar-nav-icon>
 
-      <template v-slot:append>
-        <v-tabs
-          align-btns="center"
-          color="yellow-darken-3"
-          class="d-none d-sm-flex"
-        >
-          <v-tab>Unidade</v-tab>
-          <v-tab>Serviços</v-tab>
-          <v-tab>Sobre nós</v-tab>
-          <v-tab>Contato</v-tab>
-        </v-tabs>
-      </template>
-    </v-app-bar>
+      <v-tabs
+        align-btns="center"
+        color="yellow-darken-3"
+        class="hidden sm:block"
+      >
+        <v-tab class="p">Unidade</v-tab>
+        <v-tab>Serviços</v-tab>
+        <v-tab>Sobre nós</v-tab>
+        <v-tab>Contato</v-tab>
+      </v-tabs>
+    </header>
 
     <v-navigation-drawer v-model="isActive" absolute temporary>
-      <v-list-item-group>
+      <v-list-item-group class="flex flex-col pt-4 gap-5">
         <v-list-item> <v-btn class="text-right">Unidade</v-btn></v-list-item>
 
         <v-list-item>
